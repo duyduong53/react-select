@@ -196,7 +196,6 @@ export const makeAsyncSelect = (SelectComponent: ComponentType<*>) =>
             this.select = ref;
           }}
           options={options}
-          filterOption={null}
           isLoading={isLoading}
           onInputChange={this.handleInputChange}
           onMenuScrollToBottom={this.handleMenuScrollToBottom}

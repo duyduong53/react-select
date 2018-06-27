@@ -152,7 +152,7 @@ export const makeAsyncSelect = (SelectComponent: ComponentType<*>) =>
               defaultOptions:
                 page === 1 && !inputValue
                   ? options || this.state.defaultOptions
-                  : [],
+                  : this.state.defaultOptions,
             });
           });
         }

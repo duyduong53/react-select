@@ -342,6 +342,7 @@ export const MenuList = (props: MenuListComponentProps) => {
   const { innerRef, ...rest } = innerProps;
   return (
     <div
+      unselectable="on"
       className={cx(
         emotionCss(getStyles('menuList', props)),
         {

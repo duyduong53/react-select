@@ -1,6 +1,6 @@
 {
   "name": "@thesharpieone/react-select-async-pagination",
-  "version": "2.0.0-beta.8",
+  "version": "2.0.0-beta.9",
   "description": "A Select control built with and for ReactJS",
   "main": "lib/index.js",
   "jsnext:main": "dist/react-select.es.js",

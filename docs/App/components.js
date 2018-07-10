@@ -117,7 +117,7 @@ class ScrollToTop extends Component<*> {
 
     // no scroll when extending the current path
     const pathArr = location.pathname.split('/');
-    if (!prevProps.location.pathname.includes(pathArr[1])) {
+    if (prevProps.location.pathname.indexOf(pathArr[1]) === -1) {
       window.scrollTo(0, 0);
     }
   }

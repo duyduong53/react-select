@@ -118,7 +118,7 @@ class Header extends Component<HeaderProps, HeaderState> {
   }
   componentWillReceiveProps({ location }: HeaderProps) {
     const valid = ['/', '/home'];
-    const shouldCollapse = !valid.includes(this.props.location.pathname);
+    const shouldCollapse = valid.indexOf(this.props.location.pathname) === -1;
     if (location.pathname !== this.props.location.pathname && shouldCollapse) {
       this.toggleCollapse();
     }
@@ -136,7 +136,7 @@ class Header extends Component<HeaderProps, HeaderState> {
   };
   isHome = (props = this.props) => {
     const valid = ['/', '/home'];
-    return valid.includes(props.location.pathname);
+    return valid.indexOf(props.location.pathname) > -1;
   };
   toggleCollapse = () => {
     const contentHeight = this.content.scrollHeight;

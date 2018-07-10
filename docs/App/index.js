@@ -44,7 +44,7 @@ export default class App extends Component<*> {
                   render={({ location }) => (
                     <PrimaryNav>
                       {sections.map(l => {
-                        const selected = location.pathname.includes(l.path);
+                        const selected = location.pathname.indexOf(l.path) > -1;
 
                         return (
                           <PrimaryNavItem

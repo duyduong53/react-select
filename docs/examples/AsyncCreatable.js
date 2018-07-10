@@ -5,7 +5,7 @@ import { colourOptions } from '../data';
 
 const filterColors = (inputValue: string) =>
   colourOptions.filter(i =>
-    i.label.toLowerCase().includes(inputValue.toLowerCase())
+    i.label.toLowerCase().indexOf(inputValue.toLowerCase() > -1)
   );
 
 const promiseOptions = inputValue =>

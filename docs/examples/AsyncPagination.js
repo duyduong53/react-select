@@ -10,7 +10,7 @@ type State = {
 const filterCars = (inputValue: string, page: number, itemsPerPage: number) =>
   (console.log(inputValue),
   carOptions.filter(i =>
-    i.label.toLowerCase().includes(inputValue.toLowerCase())
+    i.label.toLowerCase().indexOf(inputValue.toLowerCase() > -1)
   ).slice((page-1) * itemsPerPage, page * itemsPerPage));
 
 const loadOptions = (inputValue, page, callback) => {

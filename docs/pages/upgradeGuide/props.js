@@ -303,7 +303,7 @@ class PropChanges extends Component<
               })
               .map(data => {
                 const [prop, status, note] = data;
-                return selectedOptions.includes(getDisplayedStatus(status)) ? (
+                return selectedOptions.indexOf(getDisplayedStatus(status) > -1) ? (
                   <PropStatus
                     key={prop}
                     prop={prop}
